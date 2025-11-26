@@ -33,7 +33,6 @@ results = table(string(names)', U(:)/1e3, Pmin, Pmax, Pcons, ...
     'VariableNames',{'Point','U_kV','Pmax_at_Imin_MW','Pmax_at_Imax_MW','Pmax_conservative_MW'});
 disp(results);
 
-% ---------- helpers ----------
 function Pmw = bsearchP(Un,Xth,nlines,I,pfL,phi,Vmin,Vmax)
     Sload = nlines*sqrt(3)*Un*I;               % VA
     Pload = pfL*Sload; Qload = Pload*tan(phi); % W, var (inductive)
